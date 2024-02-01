@@ -1,10 +1,12 @@
-# Simple boid simulation using Immaginary numbers
+# Simple boid simulation using Complex numbers
 This 2D boids simulation aims to exchange angle calculations with immaginary numbers as a representation of the orientation of a boid in a bidimentional space.
 
 ## Index
-[Complex numbers implementation](#complex-numbers-implementation)
+* [Complex numbers implementation](#complex-numbers-implementation)
+* [Boids implementation](#boids-implementation)
+* [Compilation and execution](#compilation-test-and-executions-instructions)
 
-## Complex numbers implementation
+# Complex numbers implementation
 Complex numbers are defined by two double values, notation in the readme will use A as an example complex number defined as such:
 
 > A = a + bi
@@ -30,4 +32,35 @@ the operators and methods for complex numbers are implemented as follows:
 * rad(A)  returns the complex number's correspondent angle
 * getReal and getImaginary respectively return the real and imaginary components of the complex number
 
+# Boids implementation
+Boids are the units moving in the simulation.
+They are defined using one complex number for their speed and orientation, and one vector for their position.
 
+Constructors allow to instantiate one using four double, a Complex and two double, two double and a vector or a Complex and a vector.
+
+# Compilation test and executions instructions
+
+[CMAKE](https://cmake.org/) is used to compile this project. 
+To compile with CMAKE it's necessary to first configure the workspace by using the following commands inside the work directory:
+
+```
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug  // to use in development and test phase
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF // to build the executable file in production phase
+```
+
+This commands make the _build_ directory inside the current directory.
+To compile and make the executable files inside _build_ dir use the following command:
+
+```
+cmake --build build
+```
+
+Two executable files will be created: "Boids" and "Boids.t", the first is the main program implementation and will start the boids simulation in executed, latter will launch the tests for the program.
+To execute the files move inside the _build_ directory and use the following command:
+
+```
+./boids     //simulazione stormo
+
+./boids.t   //esecuzione test
+```
