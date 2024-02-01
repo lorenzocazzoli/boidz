@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.22.1)
 project(Boids VERSION 0.10)
 
 # abilita il supporto per i test, tra cui l'opzione BUILD_TESTING usata sotto
