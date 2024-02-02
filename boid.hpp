@@ -42,11 +42,13 @@ class Boid {
     // creates a list of flockmates by storing their index from the general Boids list
     std::vector<int> Boid::flock(const std::vector<Boid>& list){};
     // force updates the speed value according to behaviour rules
-    Complex Boid::force(){};
+    Complex Boid::force(const std::vector<int>& list){};
     // line of sight between boids
     bool Boid::sight(const Boid& obj){};
     // distance between boids
     double Boid::distance(const Boid& obj){};
+    // distance between boids on the two axis
+    std::vector<double> Boid::distanceXY(const Boid& obj){};
     // repulsion rule 
     Complex Boid::repulsion(const std::vector<int>& list){};
     // attraction rule
@@ -55,5 +57,5 @@ class Boid {
     Complex Boid::mVelocity(const std::vector<int>& list){};
 
     // move updates the coordinates value according to speed value
-    std::vector<double> Boid::move(){};
+    std::vector<double> Boid::move(const double dt){};
 };

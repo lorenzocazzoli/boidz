@@ -1,6 +1,10 @@
 # Simple boid simulation using Complex numbers
 This 2D boids simulation aims to exchange angle calculations with immaginary numbers as a representation of the orientation of a boid in a bidimentional space.
 
+I don't really understand why I should be using complex numbers.
+Having written the first lines of code I can see I'm not really using Complex number properties, so I'll switch to a two number system and call it a day.
+For the speeds we'll see, I'll manage with two double just fine, and I'll try not to convert to radians nor degrees, but keep it in double also for the orientation check.
+
 ## Index
 * [Complex numbers implementation](#complex-numbers-implementation)
 * [Boids implementation](#boids-implementation)
